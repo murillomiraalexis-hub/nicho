@@ -3,162 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Express | Tu Negocio</title>
+    <title>ZAGA STORE | Streetwear & Urban Clothing</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent: #10b981;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --bg-color: #0a0a0a;
+            --card-bg: #141414;
+            --accent: #f3f3f3;
+            --neon: #00ff66;
+            --text-main: #ffffff;
+            --text-muted: #888888;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px;
+            line-height: 1.5;
+            padding: 0;
+        }
+
+        /* Banner superior de alerta */
+        .top-banner {
+            background-color: var(--text-main);
+            color: var(--bg-color);
+            text-align: center;
+            padding: 8px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px 40px;
+            border-bottom: 1px solid #222;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
             margin-bottom: 10px;
-            color: var(--accent);
+            font-style: italic;
         }
 
         header p {
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 20px 0;
+            gap: 30px;
+            padding: 40px 20px;
         }
 
         .card {
             background-color: var(--card-bg);
-            border-radius: 12px;
+            border: 1px solid #222;
+            border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
+            border-color: #555;
         }
 
         .card-img {
             width: 100%;
-            height: 200px;
-            background-color: #334155;
+            height: 350px;
+            background-color: #1f1f1f;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-muted);
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #222;
         }
 
         .card-content {
             padding: 20px;
         }
 
+        .tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
         .card-title {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
+            font-weight: 700;
             margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
         .card-price {
-            color: var(--accent);
+            color: var(--text-main);
             font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 15px;
+            font-weight: 800;
+            margin-bottom: 20px;
         }
 
         .btn-whatsapp {
             display: block;
             width: 100%;
-            background-color: #25d366;
-            color: white;
+            background-color: var(--text-main);
+            color: var(--bg-color);
             text-align: center;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 14px;
+            border-radius: 2px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
+            font-weight: 900;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s, color 0.2s;
         }
 
         .btn-whatsapp:hover {
-            background-color: #20ba5a;
+            background-color: var(--neon);
+            color: #000;
         }
 
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 50px 20px;
             color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid #334155;
-            margin-top: 40px;
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 <body>
 
+    <div class="top-banner">🔥 Envios nacionales desde Cali / Nuevo Drop Disponible</div>
+
     <header>
-        <h1>Nombre de la Tienda</h1>
-        <p>Explora nuestro catálogo exclusivo y haz tu pedido directo al WhatsApp.</p>
+        <h1>ZAGA STORE</h1>
+        <p>Urbanwear / Independent Culture</p>
     </header>
 
     <main class="container">
         <!-- Producto 1 -->
         <div class="card">
-            <div class="card-img">Foto del Producto 1</div>
+            <div class="card-img">[ FOTO HOODIE OVERSIZED ]</div>
             <div class="card-content">
-                <h3 class="card-title">Artículo Destacado 1</h3>
-                <p class="card-price">$ 85.000</p>
-                <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20el%20Artículo%20Destacado%201" class="btn-whatsapp" target="_blank">Pedir por WhatsApp</a>
+                <span class="tag">New Drop</span>
+                <h3 class="card-title">Hoodie Heavyweight Black</h3>
+                <p class="card-price">$ 145.000 COP</p>
+                <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20el%20Hoodie%20Heavyweight%20Black" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
             </div>
         </div>
 
         <!-- Producto 2 -->
         <div class="card">
-            <div class="card-img">Foto del Producto 2</div>
+            <div class="card-img">[ FOTO TEE OVERSIZED ]</div>
             <div class="card-content">
-                <h3 class="card-title">Artículo Destacado 2</h3>
-                <p class="card-price">$ 120.000</p>
-                <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20el%20Artículo%20Destacado%202" class="btn-whatsapp" target="_blank">Pedir por WhatsApp</a>
+                <span class="tag">Best Seller</span>
+                <h3 class="card-title">Tee Graphic Vintage</h3>
+                <p class="card-price">$ 75.000 COP</p>
+                <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20la%20Tee%20Graphic%20Vintage" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
             </div>
         </div>
 
         <!-- Producto 3 -->
         <div class="card">
-            <div class="card-img">Foto del Producto 3</div>
+            <div class="card-img">[ FOTO CARGO PANTS ]</div>
             <div class="card-content">
-                <h3 class="card-title">Artículo Destacado 3</h3>
-                <p class="card-price">$ 45.000</p>
-                <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20el%20Artículo%20Destacado%203" class="btn-whatsapp" target="_blank">Pedir por WhatsApp</a>
+                <span class="tag">Limited Stock</span>
+                <h3 class="card-title">Cargo Pants Utility</h3>
+                <p class="card-price">$ 160.000 COP</p>
+                <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20los%20Cargo%20Pants%20Utility" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Diseñado para potenciar ventas locales.</p>
+        <p>&copy; 2026 Zaga Store. Todos los derechos reservados.</p>
     </footer>
 
 </body>
